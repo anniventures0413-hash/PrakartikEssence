@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shop | Prakartik Essence</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div id="pageHeader"></div>
+    <main>
+      <section class="inner-hero">
+        <div>
+          <p class="eyebrow">Shop</p>
+          <h1>All natural powders and blends.</h1>
+          <p>Browse the full Prakartik Essence catalog with prices, categories, and product detail pages.</p>
+        </div>
+      </section>
+      <section class="section">
+        <div class="shop-page-tools">
+          <input id="shopSearch" type="search" placeholder="Search products, concerns, categories..." />
+          <select id="shopSort">
+            <option value="featured">Featured</option>
+            <option value="low">Price: low to high</option>
+            <option value="high">Price: high to low</option>
+            <option value="name">Name: A to Z</option>
+          </select>
+        </div>
+        <div class="product-grid" id="shopGrid"></div>
+      </section>
+    </main>
+    <footer class="footer"><span>Prakartik Essence</span><span>Shop natural powders and blends</span></footer>
+    <script src="product-data.js"></script>
+    <script src="page-utils.js"></script>
+    <script src="shop-page.js"></script>
+  </body>
+</html>

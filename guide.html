@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Usage Guide | Prakartik Essence</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div id="pageHeader"></div>
+    <main>
+      <section class="inner-hero">
+        <div>
+          <p class="eyebrow">Usage Guide</p>
+          <h1>Simple routines for powders and botanicals.</h1>
+          <p>These are customer-friendly usage ideas. Final wording can be adjusted once you decide exact product instructions.</p>
+        </div>
+      </section>
+      <section class="section">
+        <div class="guide-grid">
+          <article><img id="hairImg" alt="Hair routine" /><h3>Hair wash routine</h3><p>Use Amla, Reetha, Shikakai, Bhringraj, and Hibiscus. Mix with water, apply to hair and scalp, rest briefly, and rinse thoroughly.</p></article>
+          <article><img id="skinImg" alt="Face pack routine" /><h3>Face pack routine</h3><p>Use Neem, Tulsi, Mulethi, Multani Mitti, Orange Peel, Cucumber, or Beetroot. Mix with rose water or plain water.</p></article>
+          <article><img id="floralImg" alt="Floral routine" /><h3>Floral routine</h3><p>Use Dry Rose Leaves, Hibiscus, and Gulab Jal in refreshing care routines.</p></article>
+        </div>
+      </section>
+      <section class="faq-section">
+        <div class="section-heading"><p class="eyebrow">Safety</p><h2>Usage reminders.</h2></div>
+        <div class="faq-list">
+          <details open><summary>Patch test first</summary><p>Apply a small amount on a small skin area before full use. Natural ingredients can still irritate sensitive skin.</p></details>
+          <details><summary>Avoid eyes</summary><p>Keep powders and mixtures away from eyes. Rinse immediately with clean water if contact happens.</p></details>
+          <details><summary>Use fresh mixtures</summary><p>Prepare small fresh batches instead of storing wet mixtures for long periods.</p></details>
+        </div>
+      </section>
+    </main>
+    <footer class="footer"><span>Prakartik Essence</span><span>Usage guide</span></footer>
+    <script src="product-data.js"></script>
+    <script src="page-utils.js"></script>
+    <script>
+      document.querySelector("#pageHeader").innerHTML = peHeader("Guide");
+      document.querySelector("#hairImg").src = peImageSvg(window.PE_COMBOS[0], "Hair Care");
+      document.querySelector("#skinImg").src = peImageSvg(window.PE_COMBOS[1], "Face Pack");
+      document.querySelector("#floralImg").src = peImageSvg(window.PE_PRODUCTS.find((p) => p.id === "rose-leaves"), "Floral Care");
+    </script>
+  </body>
+</html>

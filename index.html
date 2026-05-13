@@ -1,0 +1,311 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Prakartik Essence | Natural Herbal Powders</title>
+    <meta
+      name="description"
+      content="Shop natural herbal powders, dried leaves, gulab jal, and traditional hair and skin care blends from Prakartik Essence."
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="Prakartik Essence home">
+        <span class="brand-mark">PE</span>
+        <span>
+          <strong data-i18n="brand">Prakartik Essence</strong>
+          <small data-i18n="tagline">Natural powders and botanicals</small>
+        </span>
+      </a>
+      <nav class="nav" aria-label="Primary navigation">
+        <a href="shop.html" data-i18n="navShop">Shop</a>
+        <a href="about.html">About</a>
+        <a href="guide.html" data-i18n="navGuide">Guide</a>
+        <a href="policies.html">Policies</a>
+        <a href="contact.html" data-i18n="navContact">Contact</a>
+      </nav>
+      <div class="header-actions">
+        <button class="icon-btn" type="button" id="languageToggle" title="Switch language">HI</button>
+        <button class="cart-trigger" type="button" id="openCart">Cart <span id="cartCount">0</span></button>
+      </div>
+    </header>
+
+    <main id="top">
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow" data-i18n="heroEyebrow">Natural hair care, skin care, and herbal routines</p>
+          <h1 data-i18n="heroTitle">Pure botanicals for everyday care.</h1>
+          <p class="hero-text" data-i18n="heroText">
+            Prakartik Essence brings together herbal powders, dried leaves, floral ingredients, and
+            ready blends for simple routines rooted in nature.
+          </p>
+        <div class="hero-actions">
+            <a class="btn btn-primary" href="shop.html" data-i18n="exploreProducts">Explore Products</a>
+            <a class="btn btn-secondary" href="#quiz" data-i18n="buildRoutine">Build My Routine</a>
+          </div>
+        </div>
+        <div class="hero-visual" aria-label="Natural powder product display">
+          <img src="assets/hero-herbal-powders.png" alt="Assorted natural powders and dried botanicals" />
+          <div class="hero-card">
+            <span>Starting at</span>
+            <strong>&#8377;35</strong>
+            <small>per 50gm pack</small>
+          </div>
+        </div>
+      </section>
+
+      <section class="stats" aria-label="Catalog summary">
+        <div><strong>23</strong><span>products and blends</span></div>
+        <div><strong>3</strong><span>pack sizes supported</span></div>
+        <div><strong>5</strong><span>official business emails</span></div>
+        <div><strong>1-click</strong><span>WhatsApp order message</span></div>
+      </section>
+
+      <section class="section shop-section" id="products">
+        <div class="section-heading split-heading">
+          <div>
+            <p class="eyebrow">Product catalog</p>
+            <h2>Choose your ingredient.</h2>
+            <p>Search, filter, sort, favorite, preview, and add products with pack size options.</p>
+          </div>
+          <button class="btn btn-secondary" type="button" id="downloadPriceList">Download Price List</button>
+        </div>
+
+        <div class="shop-layout">
+          <aside class="shop-tools" aria-label="Product tools">
+            <label class="search-box">
+              <span>Search products</span>
+              <input id="productSearch" type="search" placeholder="Neem, Amla, Gulab Jal..." autocomplete="off" />
+            </label>
+
+            <label class="search-box">
+              <span>Sort products</span>
+              <select id="sortProducts">
+                <option value="featured">Featured</option>
+                <option value="priceLow">Price: low to high</option>
+                <option value="priceHigh">Price: high to low</option>
+                <option value="name">Name: A to Z</option>
+              </select>
+            </label>
+
+            <div class="filter-group">
+              <span>Categories</span>
+              <div class="filter-bar" aria-label="Product category filters">
+                <button class="filter-btn active" type="button" data-filter="all">All</button>
+                <button class="filter-btn" type="button" data-filter="Hair Care">Hair Care</button>
+                <button class="filter-btn" type="button" data-filter="Skin Care">Skin Care</button>
+                <button class="filter-btn" type="button" data-filter="Herbal">Herbal</button>
+                <button class="filter-btn" type="button" data-filter="Floral">Floral</button>
+                <button class="filter-btn" type="button" data-filter="favorites">Favorites</button>
+              </div>
+            </div>
+
+            <div class="filter-group">
+              <span>Shop by concern</span>
+              <div class="filter-bar concern-bar" aria-label="Product concern filters">
+                <button class="concern-btn active" type="button" data-concern="all">All</button>
+                <button class="concern-btn" type="button" data-concern="Hair Fall">Hair Fall</button>
+                <button class="concern-btn" type="button" data-concern="Dandruff">Dandruff</button>
+                <button class="concern-btn" type="button" data-concern="Glow">Glow</button>
+                <button class="concern-btn" type="button" data-concern="Face Pack">Face Pack</button>
+              </div>
+            </div>
+
+            <div class="mini-note">
+              <strong>Order flow</strong>
+              <span>Add items, adjust quantities in cart, copy summary, or send the enquiry on WhatsApp.</span>
+            </div>
+          </aside>
+
+          <div class="product-grid" id="productGrid" aria-live="polite"></div>
+        </div>
+      </section>
+
+      <section class="combo-section" id="combos">
+        <div class="section-heading compact">
+          <p class="eyebrow">Ready blends</p>
+          <h2>Combos for easy routines.</h2>
+        </div>
+        <div class="combo-grid" id="comboGrid"></div>
+      </section>
+
+      <section class="quiz-section" id="quiz">
+        <div class="section-heading">
+          <p class="eyebrow">Routine quiz</p>
+          <h2>Find the right starting set.</h2>
+          <p>Pick a concern and budget. The site recommends a small routine you can add to cart.</p>
+        </div>
+        <div class="quiz-panel">
+          <label>
+            <span>Main concern</span>
+            <select id="quizConcern">
+              <option value="Hair Fall">Hair fall / growth care</option>
+              <option value="Dandruff">Dandruff / scalp care</option>
+              <option value="Glow">Skin glow</option>
+              <option value="Face Pack">Face pack basics</option>
+              <option value="Floral">Floral care</option>
+            </select>
+          </label>
+          <label>
+            <span>Budget</span>
+            <select id="quizBudget">
+              <option value="150">Under &#8377;150</option>
+              <option value="250">Under &#8377;250</option>
+              <option value="400">Under &#8377;400</option>
+            </select>
+          </label>
+          <button class="btn btn-primary" type="button" id="runQuiz">Recommend Products</button>
+        </div>
+        <div class="recommendation-grid" id="recommendations"></div>
+      </section>
+
+      <section class="guide-section" id="guide">
+        <div class="section-heading">
+          <p class="eyebrow">Usage guide</p>
+          <h2>Simple natural routines.</h2>
+        </div>
+        <div class="guide-grid">
+          <article>
+            <img id="guideHairImage" alt="Hair care herbal powder visual" />
+            <h3>Hair wash mix</h3>
+            <p>Amla + Reetha + Shikakai + Bhringraj + Hibiscus. Mix with water, apply, rest, and rinse gently.</p>
+          </article>
+          <article>
+            <img id="guideSkinImage" alt="Skin care herbal powder visual" />
+            <h3>Face pack mix</h3>
+            <p>Neem + Tulsi + Mulethi or Multani Mitti. Make a smooth paste, patch test, apply briefly, and rinse.</p>
+          </article>
+          <article>
+            <img id="guideFloralImage" alt="Floral care visual" />
+            <h3>Floral care</h3>
+            <p>Use Dry Rose Leaves or Gulab Jal in cooling, refreshing skin-care routines.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="faq-section" id="faq">
+        <div class="section-heading">
+          <p class="eyebrow">FAQ</p>
+          <h2>Common questions.</h2>
+        </div>
+        <div class="faq-list">
+          <details>
+            <summary>Are prices per 50gm?</summary>
+            <p>Yes. Prices are per 50gm unless the product is liquid, like Gulab Jal, which is listed per 50ml.</p>
+          </details>
+          <details>
+            <summary>Should customers patch test?</summary>
+            <p>Yes. Natural ingredients can still irritate sensitive skin, so a patch test is recommended before use.</p>
+          </details>
+          <details>
+            <summary>How does WhatsApp ordering work?</summary>
+            <p>Add items to cart, adjust quantity, then use Send on WhatsApp. The site creates the message automatically.</p>
+          </details>
+        </div>
+      </section>
+
+      <span class="anchor-target" id="order" aria-hidden="true"></span>
+
+      <section class="contact-section" id="contact">
+        <div class="section-heading">
+          <p class="eyebrow">Contact Prakartik Essence</p>
+          <h2>Reach the brand directly.</h2>
+          <p>Use WhatsApp for order enquiries, Instagram for updates, or any official business email below.</p>
+        </div>
+
+        <div class="contact-layout">
+          <div class="contact-card highlight">
+            <span>WhatsApp orders</span>
+            <strong>8077876739</strong>
+            <a class="btn btn-primary" href="https://wa.me/918077876739" target="_blank" rel="noopener">
+              Chat on WhatsApp
+            </a>
+          </div>
+
+          <div class="contact-card">
+            <span>Instagram</span>
+            <strong>@prakartikessence025</strong>
+            <a class="btn btn-secondary" href="https://www.instagram.com/prakartikessence025/" target="_blank" rel="noopener">
+              Open Instagram
+            </a>
+          </div>
+
+          <div class="email-card">
+            <span>Business emails</span>
+            <div class="email-list">
+              <a href="mailto:ankit@prakartikessence.com">ankit@prakartikessence.com</a>
+              <a href="mailto:nirbhayagarwal@prakartikessence.com">nirbhayagarwal@prakartikessence.com</a>
+              <a href="mailto:contact@prakartikessence.com">contact@prakartikessence.com</a>
+              <a href="mailto:info@prakartikessence.com">info@prakartikessence.com</a>
+              <a href="mailto:support@prakartikessence.com">support@prakartikessence.com</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <aside class="cart-drawer" id="cartDrawer" aria-hidden="true">
+      <div class="drawer-backdrop" id="drawerBackdrop"></div>
+      <div class="drawer-panel" role="dialog" aria-modal="true" aria-labelledby="cartTitle">
+        <div class="drawer-header">
+          <div>
+            <p class="eyebrow">Cart</p>
+            <h2 id="cartTitle">Order summary</h2>
+          </div>
+          <button class="icon-btn" type="button" id="closeCart" aria-label="Close cart">x</button>
+        </div>
+        <div class="order-items" id="orderItems"></div>
+        <label class="delivery-box">
+          <span>Delivery estimate</span>
+          <select id="deliveryZone">
+            <option value="0">Pickup / confirm later</option>
+            <option value="50">Local delivery + &#8377;50</option>
+            <option value="90">Standard delivery + &#8377;90</option>
+          </select>
+        </label>
+        <div class="order-total">
+          <span>Estimated total</span>
+          <strong id="orderTotal">&#8377;0</strong>
+        </div>
+        <p class="discount-note" id="discountNote"></p>
+        <a class="btn btn-primary" id="whatsappOrder" href="https://wa.me/918077876739" target="_blank" rel="noopener">
+          Send on WhatsApp
+        </a>
+        <button class="copy-order" type="button" id="copyOrder">Copy Order Summary</button>
+        <button class="clear-order" type="button" id="clearOrder">Clear Cart</button>
+      </div>
+    </aside>
+
+    <div class="modal" id="productModal" aria-hidden="true">
+      <div class="modal-backdrop" id="modalBackdrop"></div>
+      <article class="modal-card" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+        <button class="icon-btn modal-close" type="button" id="closeModal" aria-label="Close product details">x</button>
+        <img id="modalImage" alt="" />
+        <div class="modal-content">
+          <p class="eyebrow" id="modalCategory"></p>
+          <h2 id="modalTitle"></h2>
+          <p id="modalNote"></p>
+          <div class="detail-list">
+            <div><strong>Benefits</strong><span id="modalBenefits"></span></div>
+            <div><strong>How to use</strong><span id="modalUsage"></span></div>
+            <div><strong>Best paired with</strong><span id="modalPairs"></span></div>
+          </div>
+          <div class="modal-actions">
+            <select id="modalPack"></select>
+            <button class="btn btn-primary" type="button" id="modalAdd">Add to Cart</button>
+          </div>
+          <small class="safety-note">Patch test before use. Avoid contact with eyes.</small>
+        </div>
+      </article>
+    </div>
+
+    <footer class="footer">
+      <span>Prakartik Essence</span>
+      <span>Natural powders, dried leaves, and herbal blends</span>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

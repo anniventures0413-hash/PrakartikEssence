@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact | Prakartik Essence</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div id="pageHeader"></div>
+    <main>
+      <section class="inner-hero">
+        <div>
+          <p class="eyebrow">Contact</p>
+          <h1>Orders, support, and business enquiries.</h1>
+          <p>WhatsApp is best for fast order enquiries. Official email addresses are available for business and support communication.</p>
+        </div>
+      </section>
+      <div id="contactBlock"></div>
+      <section class="section">
+        <div class="section-heading"><p class="eyebrow">Business note</p><h2>Email routing.</h2></div>
+        <div class="detail-page-grid">
+          <article><span>Public emails</span><p>Customers see branded email addresses such as contact@prakartikessence.com and support@prakartikessence.com.</p></article>
+          <article><span>Internal inbox</span><p>All branded emails can be forwarded to the internal inbox you shared, without publishing that Gmail address on the website.</p></article>
+        </div>
+      </section>
+    </main>
+    <footer class="footer"><span>Prakartik Essence</span><span>Contact details</span></footer>
+    <script src="page-utils.js"></script>
+    <script>
+      document.querySelector("#pageHeader").innerHTML = peHeader("Contact");
+      document.querySelector("#contactBlock").innerHTML = peContactBlock();
+    </script>
+  </body>
+</html>
